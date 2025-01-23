@@ -162,14 +162,14 @@ to adjust-glucose
     ifelse (glucose-store >= net-signal) [
       hatch-glucoses net-signal [
         random-position
-        set color white
+        set color orange
         set size molecule-size
       ]
       set glucose-store glucose-store - net-signal
     ] [
       hatch-glucoses glucose-store [
         random-position
-        set color white
+        set color orange
         set size molecule-size
       ]
       set glucose-store 0
@@ -193,7 +193,7 @@ to adjust-hormones
   if (glucose-count < glucose-baseline) [
     hatch-glucagons signal-count [
       random-position
-      set color red
+      set color pink
       set size molecule-size * 2
       set lifetime random-exponential hormone-mean-life
     ]
@@ -201,7 +201,7 @@ to adjust-hormones
   if (glucose-count > glucose-baseline) [
     hatch-insulins signal-count [
       random-position
-      set color sky
+      set color cyan
       set size molecule-size * 2
       set lifetime random-exponential hormone-mean-life
     ]
